@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    max-width: 750px;
+    margin: auto;
+    padding: 1em;
+}
+
+input {
+    background: #E5E5E5;
+    padding: 0;
+    border: none;
+    height: 2.5rem;
+}
+
+select, button {
+    border: 2px solid #D1D5DB;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+select:hover, select:focus, button:hover, button:focus {
+    border-color: #9CA3AF;
+}
+
+select:active, button:active {
+    border-color: #4FEDED;
+}
+
+select {
+    width: 60%;
+    padding: 0.5em;
+    font-size: 1rem;
+    appearance: none;
+    /* background: url("https://i.postimg.cc/zf5FxTCL/arrow.png") no-repeat right 0.5em center; */
+    background: url("../images/arrow.png") no-repeat right 0.5em center;
+    background-size: 1.5em;
+}
+
+button {
+    font-size: 0.7rem;
+    background: white;
+    color: #374151;
+}
+
+.colors {
+    height: calc(100vh - 4.5rem);
+    overflow: auto;
+}
+
+.colors div {
+    height: 20%;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.colors div p {
+    margin: 0 0 0 auto;
+    padding: 0 0.7em;
+    background: white;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (min-width:475px) {
+    .colors {
+        display: flex;
+    }
+
+    .colors div {
+        width: 20%;
+        height: calc(100vh - 4.5rem);
+    }
+
+    .colors div p {
+        margin: auto 0 0;
+        padding: 0.7em;
+        width: 100%;
+    }
+}
