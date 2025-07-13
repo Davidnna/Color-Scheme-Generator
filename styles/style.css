@@ -74,6 +74,30 @@ button {
     overflow-wrap: break-word;
 }
 
+h5 {
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    background: #4FEDED;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    animation: fadeInOut 5s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (min-width:475px) {
     .colors {
         display: flex;

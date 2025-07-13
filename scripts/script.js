@@ -27,9 +27,13 @@ document.addEventListener("click", function (e) {
     if (e.target.tagName === "DIV" || e.target.tagName === "P") {
         const hex = e.target.id;
         navigator.clipboard.writeText(`#${hex}`).then(() => {
-            alert(`Copied #${hex} to clipboard!`);
-        }).catch(err => {
-            console.error('Failed to copy: ', err);
+            const copiedMessage = document.createElement("h5");
+            copiedMessage.setAttribute("aria-live", "polite");
+            copiedMessage.innerText = `Copied #${hex} to clipboard!`;
+            document.body.appendChild(copiedMessage);
+            setTimeout(() => {
+                document.body.removeChild(copiedMessage);
+            }, 5000);
         });
     }
 });
